@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Review{% endblock %}
+
+{% block content %}
+
+    <form method="post">
+        {% csrf_token %}
+        <p>
+            <input type="email" name="email" placeholder="Enter your email" id="">
+        </p>
+        <p>
+            <input type="text" name="phone" placeholder="Enter your phone number" id="">
+        </p>   
+        <p>
+            <input type="text" name="text" placeholder="Enter review message">
+        </p>
+        <button type="submit">Send</button>
+    </form>
+
+{% endblock %}
+
